@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Happy Birthday Kiran ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;overflow:hidden;font-family:Arial,sans-serif;background:#100018;color:white;text-align:center}
+.bg{position:fixed;inset:0;background:radial-gradient(circle at 50% 25%,rgba(255,50,180,.35),transparent 35%),linear-gradient(135deg,#180021,#4d074e,#100018);z-index:-3}
+.stars{position:fixed;inset:0;z-index:-2}
+.star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;box-shadow:0 0 10px white;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:.2;transform:scale(.4)}}
+.couple{position:fixed;left:50%;bottom:-10px;transform:translateX(-50%);width:330px;height:230px;z-index:-1;opacity:.42}
+.head{position:absolute;width:70px;height:70px;border-radius:50%;background:#f2b28e;top:20px}
+.boy{left:70px}.girl{right:70px}
+.body{position:absolute;width:115px;height:150px;border-radius:60px 60px 10px 10px;top:85px}
+.boybody{left:45px;background:#16284d}.girlbody{right:45px;background:#8e176e}
+.hair{position:absolute;width:82px;height:50px;border-radius:50px 50px 20px 20px;background:#171018;top:5px}
+.boyhair{left:64px}.girlhair{right:64px}
+.hands{position:absolute;width:130px;height:18px;border-radius:20px;background:#f2b28e;top:120px;left:100px;transform:rotate(8deg)}
+.card{width:min(430px,94vw);height:94vh;max-height:760px;margin:3vh auto;padding:30px 20px;border-radius:32px;background:rgba(255,255,255,.10);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);box-shadow:0 0 60px rgba(255,0,190,.35);overflow:auto}
+h1{font-size:31px;text-shadow:0 0 20px #ff50d0}
+.name{font-size:52px;font-weight:bold;color:#ff9be9;text-shadow:0 0 25px #ff20c8;margin:8px 0 10px}
+.sub{font-size:17px;color:#ffe4f8;line-height:1.6}
+.cake{position:relative;width:220px;height:160px;margin:25px auto}
+.layer{position:absolute;left:20px;width:180px;height:58px;border-radius:16px;background:linear-gradient(#ff91df,#cf238e);box-shadow:0 8px 20px #0008}
+.l1{top:55px}.l2{top:105px}
+.cream{position:absolute;top:50px;left:20px;width:180px;height:20px;background:white;border-radius:50%}
+.candle{position:absolute;top:7px;width:11px;height:48px;background:white;border-radius:4px}
+.ca1{left:75px}.ca2{left:104px}.ca3{left:133px}
+.flame{position:absolute;top:-24px;left:-3px;width:17px;height:24px;background:#ffd52f;border-radius:50%;box-shadow:0 0 18px #ffb000;animation:flicker .6s infinite alternate}
+@keyframes flicker{to{transform:scale(1.15) rotate(5deg)}}
+button{border:0;border-radius:50px;padding:14px 23px;margin:5px;font-size:16px;font-weight:bold;color:white;background:linear-gradient(90deg,#ff1493,#8e2cff);box-shadow:0 0 20px #ff149388;cursor:pointer}
+#cut{display:none}
+#surprise{display:none;margin-top:20px;line-height:1.7}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:up 5s linear forwards}
+@keyframes up{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.music{margin-top:8px;font-size:13px;color:#ffc7ef;opacity:.9}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="stars" id="stars"></div>
+<div class="couple">
+<div class="head boy"></div><div class="head girl"></div>
+<div class="hair boyhair"></div><div class="hair girlhair"></div>
+<div class="body boybody"></div><div class="body girlbody"></div><div class="hands"></div>
+</div>
+<div class="card">
+<h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+<div class="name">Kiran ❤️</div>
+<div class="sub">To my beautiful Kiran 💕<br>You are one of the most special people in my life. 🥰<br>May every dream of yours come true,<br>and may your smile stay forever. ✨</div>
+<div class="cake">
+<div class="candle ca1"><div class="flame"></div></div>
+<div class="candle ca2"><div class="flame"></div></div>
+<div class="candle ca3"><div class="flame"></div></div>
+<div class="cream"></div><div class="layer l1"></div><div class="layer l2"></div>
+</div>
+<button id="blow" onclick="blow()">🕯️ Blow Candles</button>
+<button id="cut" onclick="cut()">🎂 Cut The Cake</button>
+<div id="surprise"><h2>💖 Zain ❤️ Kiran 💖</h2><p>Two names, one beautiful story. 🥹❤️<br>Kiran, may your birthday be as beautiful<br>as your smile. 🎂✨</p></div>
+<div class="music">🎵 Tap anywhere for a soft romantic melody</div>
+</div>
+<script>
+for(let i=0;i<80;i++){let s=document.createElement("div");s.className="star";s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";s.style.animationDelay=Math.random()*2+"s";document.getElementById("stars").appendChild(s)}
+function heart(){let h=document.createElement("div");h.className="heart";h.innerHTML=["❤️","💖","💕","💗","✨","🌹"][Math.floor(Math.random()*6)];h.style.left=Math.random()*100+"vw";h.style.fontSize=(18+Math.random()*25)+"px";h.style.animationDuration=(3+Math.random()*3)+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),6500)}
+function blow(){document.querySelectorAll(".flame").forEach(x=>x.style.display="none");document.getElementById("blow").style.display="none";document.getElementById("cut").style.display="inline-block";for(let i=0;i<30;i++)setTimeout(heart,i*80)}
+function cut(){document.getElementById("cut").style.display="none";document.getElementById("surprise").style.display="block";for(let i=0;i<70;i++)setTimeout(heart,i*60)}
+let audioStarted=false;
+function music(){if(audioStarted)return;audioStarted=true;const ctx=new (window.AudioContext||window.webkitAudioContext)();const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let i=0;setInterval(()=>{let o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=notes[i++%notes.length];o.type="sine";g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.035,ctx.currentTime+.08);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+1);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+1.05)},650)}
+document.body.addEventListener("click",music,{once:true});
+</script>
+</body>
+</html>
